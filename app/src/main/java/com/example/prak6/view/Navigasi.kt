@@ -34,3 +34,15 @@ fun DataApp() {
             )
         }
 
+        composable("detail") {
+            TampilData(
+                nama = namaSiswa,
+                jenisKelamin = jenisKelaminSiswa,
+                alamat = alamatSiswa,
+                onBackBtnClick = {
+                    navController.popBackStack()
+                }
+            )
+        }
+    }
+}
