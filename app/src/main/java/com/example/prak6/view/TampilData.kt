@@ -41,3 +41,27 @@ fun TampilData(
             Column(
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
+                items.forEach { item ->
+                    Column {
+                        Text(text = item.first.uppercase())
+                        Text(
+                            text = item.second,
+                            style = MaterialTheme.typography.titleMedium
+                        )
+                        HorizontalDivider(
+                            thickness = 1.dp,
+                            color = Color.Cyan
+                        )
+                    }
+                }
+            }
+
+            Button(
+                onClick = onBackBtnClick,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text("Back")
+            }
+        }
+    }
+}
