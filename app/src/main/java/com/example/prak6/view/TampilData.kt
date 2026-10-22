@@ -1,4 +1,3 @@
-
 package com.example.newpertemuan6.view
 
 import androidx.compose.foundation.layout.*
@@ -16,3 +15,29 @@ fun TampilData(
     alamat: String,
     onBackBtnClick: () -> Unit
 ) {
+    val items = listOf(
+        Pair("Nama Lengkap", nama),
+        Pair("Jenis Kelamin", jenisKelamin),
+        Pair("Alamat", alamat)
+    )
+
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text("Tampilan Data") },
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = Color.Cyan
+                )
+            )
+        }
+    ) { isiRuang ->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(isiRuang)
+                .padding(20.dp),
+            verticalArrangement = Arrangement.SpaceBetween
+        ) {
+            Column(
+                verticalArrangement = Arrangement.spacedBy(16.dp)
+            ) {
