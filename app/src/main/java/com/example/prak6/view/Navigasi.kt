@@ -1,10 +1,7 @@
+
 package com.example.prak6
 
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.runtime.*
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -29,6 +26,7 @@ fun DataApp() {
                     namaSiswa = nama
                     jenisKelaminSiswa = jenisKelamin
                     alamatSiswa = alamat
+
                     navController.navigate("detail")
                 }
             )
