@@ -1,4 +1,5 @@
-package com.example.mytesting6.view
+
+package com.example.prak6.view
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -23,7 +24,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.mytesting6.R
+import com.example.prak6.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -42,8 +43,13 @@ fun TampilData(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(text = stringResource(id = R.string.tampil), color = Color.White) },
-                colors = TopAppBarDefaults.mediumTopAppBarColors(
+                title = {
+                    Text(
+                        text = stringResource(id = R.string.tampil),
+                        color = Color.White
+                    )
+                },
+                colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = colorResource(id = R.color.teal_700)
                 )
             )
@@ -61,7 +67,11 @@ fun TampilData(
             ) {
                 items.forEach { item ->
                     Column {
-                        Text(text = item.first.uppercase(), fontSize = 16.sp)
+                        Text(
+                            text = item.first.uppercase(),
+                            fontSize = 16.sp
+                        )
+
                         Text(
                             text = item.second,
                             fontWeight = FontWeight.Bold,
@@ -69,7 +79,11 @@ fun TampilData(
                             fontSize = 22.sp
                         )
                     }
-                    HorizontalDivider(thickness = 1.dp, color = Color.Cyan)
+
+                    HorizontalDivider(
+                        thickness = 1.dp,
+                        color = Color.Cyan
+                    )
                 }
             }
 

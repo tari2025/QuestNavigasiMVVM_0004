@@ -1,4 +1,4 @@
-package com.example.newpertemuan6.view
+package com.example.prak6.view
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
